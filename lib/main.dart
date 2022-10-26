@@ -52,7 +52,10 @@ class MyApp extends StatelessWidget {
 
             ),
             SizedBox(height: 20,),
-            Container(
+           Test(icon: Icons.call, txt: "+201208466468"),
+           SizedBox(height: 20,),
+           Test(icon: Icons.mail, txt: "tervinasamir@gmail.com")
+           /* Container(
               height: 50,
               width: 300,
               child: Card(
@@ -82,13 +85,41 @@ class MyApp extends StatelessWidget {
                     Text("tervinasamir@gmail.com")
                   ],
                 ),
-              ),
+              ),*/
 
           ],
 
         ),
       ),
         )
+    );
+  }
+}
+class Test extends StatelessWidget {
+
+  const Test({required this.icon,required this.txt,Key? key}) : super(key: key);
+
+  final String txt;
+  final IconData icon;
+  @override
+
+  Widget build(BuildContext context) {
+  //  String txt="name";
+   // IconData icon;
+    return Container(
+      height: 50,
+      width: 300,
+      child: Card(
+        child: Row(
+          children: [
+            SizedBox(width: 10,),
+            Icon(icon,color: Colors.blue,size: 20,),
+            SizedBox(width: 20,),
+            Text(txt),
+          ],
+        ),
+
+      ),
     );
   }
 }
